@@ -39,3 +39,4 @@ p.yspd = knockback_strength_y;
     }
 
 }
+show_debug_message("asfhbafdhb")
