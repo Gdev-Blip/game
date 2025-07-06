@@ -1,0 +1,9 @@
+nombre = "Sofi"; // o el nombre que sea
+ataque = 10;
+defensa = 5;
+velocidad = 7;
+target_x = x;
+scale = 1;
+hovered = false;
+clicked = false;
+scale_x = 1
