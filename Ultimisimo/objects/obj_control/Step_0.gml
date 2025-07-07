@@ -4,3 +4,6 @@ if instance_exists(obj_volver) {
 } else {
 	instance_destroy(obj_volverspr)	
 }
+if (global.mouse_gui_delay > 0) {
+    global.mouse_gui_delay--;
+}

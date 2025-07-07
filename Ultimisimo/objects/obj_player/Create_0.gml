@@ -7,7 +7,7 @@ yspd               = 0;
 limite             = 6;
 aceleracion        = 4;
 originaccel = aceleracion;
-frenado            = 0.4;
+frenado            = 0.6;
 originlimite = limite;
 gravedad           = 1;
 salto_fuerza       = -14;
@@ -100,13 +100,17 @@ tp_filter_alpha = 0.5;                   // Opacidad del filtro gris
 // --- COOLDOWN DE TP ---
 tp_cooldown      = 0;                    // Contador que irá bajando
 tp_cooldown_max  = room_speed * 10;      // 10 s = 10 * room_speed (steps)
-saved_limite        = limite;
+saved_limite = limite;
 saved_salto_fuerza  = salto_fuerza;
 saved_aceleracion   = aceleracion;
 saved_puede_dashear = puede_dashear;
 saved_puede_tp      = puede_tp;
+tinte_rojo = 0; // 0 = sin tinte, 1 = completamente rojo
 
 // Variables del shake por pasos
 footstep_count = 0;
 footstep_timer = room_speed * 0.5; // o el valor que quieras usar como intervalo
 global.invulnera = invulnera
+en_suelo = place_meeting(x,y,obj_suelo);
+dano_cooldown = 0;
+tinte_rojo = 0;

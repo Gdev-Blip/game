@@ -1,1 +1,4 @@
 global.hover_id = noone;
+global.mouse_clicked_gui = true;
+global.mouse_gui_delay = 4; // unos 4 frames (~0.06s)
+ 

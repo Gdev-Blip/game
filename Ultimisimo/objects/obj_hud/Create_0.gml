@@ -10,7 +10,7 @@ hud_w       = 300;
 hud_h       = 100;
 
 // Posición fija en GUI
-hud_x = hud_margin;
+hud_x = 100;
 hud_y = hud_margin;
 
 // Escala del ASCII (ajustá según tu sprite)

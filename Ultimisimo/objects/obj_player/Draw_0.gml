@@ -44,3 +44,5 @@ draw_rectangle(x1, y1, x1 + (bar_w * procent), y1 + bar_h, true);
 
 // 7) Volvemos el color a blanco por si hay más draw después:
 draw_set_color(c_white);
+var color_final = merge_color(c_white, c_red, tinte_rojo);
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, color_final, image_alpha);
