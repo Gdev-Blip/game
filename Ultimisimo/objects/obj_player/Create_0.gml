@@ -4,10 +4,10 @@
 // --- FÍSICA & MOVIMIENTO ---
 xspd               = 0;
 yspd               = 0;
-limite             = 5;
-aceleracion        = 4;
+limite             = 6;
+aceleracion        = 3;
 originaccel = aceleracion;
-frenado            = 0.6;
+frenado            = 0.5;
 originlimite = limite;
 gravedad           = 1;
 salto_fuerza       = -14;
@@ -38,7 +38,7 @@ puede_dashear      = true;
 dash_en_proceso    = false;
 dash_timer         = 0;
 dash_cooldown      = 0;
-dash_vel           = 25;
+dash_vel           = 15;
 dash_duracion      = room_speed * 0.33;  // 0.25 segundos de dash
 dash_cooldown_max  = room_speed * 1;
 dash_sfx_played    = false; // inicializamos la flag para el audio

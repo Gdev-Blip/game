@@ -112,6 +112,7 @@ if (mouse_check_button_pressed(mb_left) && !global.mouse_clicked_gui && ataque_c
 }
 
 // === RÁFAGA (CLICK DER) ===
+// === RÁFAGA (CLICK DER) ===
 if (mouse_check_button_pressed(mb_right) && super_cooldown <= 0 && !dash_en_proceso) {
     super_cooldown    = room_speed * 5;
     flash_alpha       = 1;
@@ -130,6 +131,10 @@ if (is_bursting) {
         var bb   = instance_create_layer(x, y, "Instances", bullet);
         bb._direccion = dir2;
         bb.image_angle = dir2;
+
+        // Reproduce el sonido aquí, por cada disparo
+        audio_play_sound(shooting, 1, false);
+
         xspd -= retroceso_burst * image_xscale;
         burst_shots_fired++;
         burst_timer = burst_interval;
@@ -244,10 +249,21 @@ if (shake_time > 0) {
     shake_offset_x = 0;
     shake_offset_y = 0;
 }
+// Cámara con retraso suave
+if (!variable_global_exists("cam_x")) {
+    global.cam_x = x;
+    global.cam_y = y;
+}
 
-var target_x = x - (camera_get_view_width(view_camera[0]) / 2) + shake_offset_x;
-var target_y = y - (camera_get_view_height(view_camera[0]) / 2) + shake_offset_y;
-camera_set_view_pos(view_camera[0], target_x, target_y);
+var follow_x = x - (camera_get_view_width(view_camera[0]) / 2) + shake_offset_x;
+var follow_y = y - (camera_get_view_height(view_camera[0]) / 2) + shake_offset_y;
+
+// Lerp hacia el objetivo, entre 0 (no se mueve) y 1 (se mueve instantáneo)
+global.cam_x = lerp(global.cam_x, follow_x, 0.1);
+global.cam_y = lerp(global.cam_y, follow_y, 0.1);
+
+camera_set_view_pos(view_camera[0], global.cam_x, global.cam_y);
+
 
 // === SYNC VIDA GLOBAL ===
 global.vidaplayer = vida;
