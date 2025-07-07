@@ -199,15 +199,28 @@ if (!esta_atacando && !dash_en_proceso && !is_bursting) {
 }
 
 // === SISTEMA DE DAÑO CON TINTE ROJO ===
-if (dano_cooldown <= 0 && place_meeting(x, y, obj_enemy)) {
-    vida -= dano_recibido;
-    xspd += 8 * -image_xscale;
-    yspd  = -10;
-    tinte_rojo = 1;
-    dano_cooldown = room_speed * 0.4;
-    shake_time = 7;
-    shake_intensity = 10;
+// === SISTEMA DE DAÑO CON TINTE ROJO (ambos tipos de enemigos) ===
+if (dano_cooldown <= 0) {
+    if (place_meeting(x, y, obj_enemy)) {
+        vida -= dano_recibido;
+        xspd += 8 * -image_xscale;
+        yspd  = -10;
+        tinte_rojo = 1;
+        dano_cooldown = room_speed * 0.4;
+        shake_time = 7;
+        shake_intensity = 10;
+    }
+    else if (place_meeting(x, y, obj_enemy_fisicas)) {
+        vida -= (dano_recibido / 4);
+        xspd += 13 * -image_xscale;
+        yspd  = -13;
+        tinte_rojo = 1;
+        dano_cooldown = room_speed * 0.4;
+        shake_time = 7;
+        shake_intensity = 10;
+    }
 }
+
 if (dano_cooldown > 0) dano_cooldown--;
 
 // === EFECTO ROJO SUAVE ===

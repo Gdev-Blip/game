@@ -4,7 +4,7 @@
 // --- FÍSICA & MOVIMIENTO ---
 xspd               = 0;
 yspd               = 0;
-limite             = 6;
+limite             = 5;
 aceleracion        = 4;
 originaccel = aceleracion;
 frenado            = 0.6;
@@ -106,6 +106,9 @@ saved_aceleracion   = aceleracion;
 saved_puede_dashear = puede_dashear;
 saved_puede_tp      = puede_tp;
 tinte_rojo = 0; // 0 = sin tinte, 1 = completamente rojo
+dano_cooldown = 0;
+dano_recibido = 10; // o lo que uses vos
+tinte_rojo = 0;
 
 // Variables del shake por pasos
 footstep_count = 0;

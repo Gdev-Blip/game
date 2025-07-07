@@ -14,7 +14,7 @@ var my = device_mouse_y_to_gui(0);
 global.mouse_clicked_gui = false;
 
 if mouse_check_button_pressed(mb_left) &&
-   point_in_rectangle(mx, my, x_gui, y_gui, x_gui + ancho, y_gui + alto) {
+   point_in_rectangle(mx, my, x_gui, y_gui, x_gui + ancho, y_gui + alto) or keyboard_check_pressed(vk_escape) {
     
     global.mouse_clicked_gui = true;
 

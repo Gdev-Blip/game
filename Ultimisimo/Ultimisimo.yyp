@@ -91,6 +91,7 @@
     {"id":{"name":"Script4","path":"scripts/Script4/Script4.yy",},},
     {"id":{"name":"searchFree","path":"scripts/searchFree/searchFree.yy",},},
     {"id":{"name":"fall","path":"sequences/fall/fall.yy",},},
+    {"id":{"name":"shader_glow","path":"shaders/shader_glow/shader_glow.yy",},},
     {"id":{"name":"dash","path":"sounds/dash/dash.yy",},},
     {"id":{"name":"footsteps","path":"sounds/footsteps/footsteps.yy",},},
     {"id":{"name":"jump","path":"sounds/jump/jump.yy",},},
