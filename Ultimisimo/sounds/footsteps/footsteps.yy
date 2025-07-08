@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.9920181,
+  "duration":0.9046939,
   "exportDir":"",
   "name":"footsteps",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"footsteps.mp3",
+  "soundFile":"footsteps.ogg",
   "volume":1.0,
 }

@@ -83,7 +83,11 @@ if (en_suelo && abs(xspd) > 0.5 && (izq || der)) {
     if (!place_meeting(x + dir, y, obj_suelo) && !place_meeting(x + dir, y, obj_sueloDESTRUIBLE)) {
         footstep_timer--;
         if (footstep_timer <= 0) {
-            audio_play_sound(snd_footsteps, 1, false);
+            var ida = audio_play_sound(snd_footsteps, 1, false);
+audio_sound_pitch(ida, random_range(1.0, 1.4));
+audio_sound_gain(ida, random_range(0.5, 0.6), 0); // volumen entre 80% y 100%
+
+	
             footstep_timer = room_speed * 0.5;
         }
     } else footstep_timer = 0;

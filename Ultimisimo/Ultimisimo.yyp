@@ -49,7 +49,6 @@
   },
   "name":"Ultimisimo",
   "resources":[
-    {"id":{"name":"Extension1","path":"extensions/Extension1/Extension1.yy",},},
     {"id":{"name":"fnt_ui","path":"fonts/fnt_ui/fnt_ui.yy",},},
     {"id":{"name":"font_futurista","path":"fonts/font_futurista/font_futurista.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
