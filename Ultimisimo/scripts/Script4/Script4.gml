@@ -1,6 +1,6 @@
-/// SCRIPT global o dentro de obj_player (llámalo searchFree2)
+/// SCRIPT global o dentro de oplayer (llámalo searchFree2)
 /// searchFree2(x0, y0) → [xLibre, yLibre]
-/// Busca un lugar cercano donde el obj_player (su máscara) no choque nada.
+/// Busca un lugar cercano donde el oplayer (su máscara) no choque nada.
 
 function searchFree2(x0, y0) {
     // --- Parámetros de búsqueda ---

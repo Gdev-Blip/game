@@ -1,12 +1,12 @@
 /// STEP EVENT de obj_daño
 if global.invulnera != true {
 // --- COLISIÓN CON PLAYER ---
-if (place_meeting(x, y, obj_player)) {
+if (place_meeting(x, y, oplayer)) {
 	global.invulnera = true;
 	// En cualquier evento (por ejemplo, Create o Step)
 alarm[0] = 20; // 60 steps = 1 segundo si estás a 60 FPS
 
-    var p = instance_place(x, y, obj_player);
+    var p = instance_place(x, y, oplayer);
 
 
         // Si esta instancia tiene una variable "daño_personalizado", la usamos
@@ -22,7 +22,7 @@ alarm[0] = 20; // 60 steps = 1 segundo si estás a 60 FPS
 var knockback_strength_x = 9;
 var knockback_strength_y = -6;
 
-p.xspd += -obj_player.image_xscale * knockback_strength_x;
+p.xspd += -oplayer.image_xscale * knockback_strength_x;
 p.yspd = knockback_strength_y;
 
         p.vida -= dmg;

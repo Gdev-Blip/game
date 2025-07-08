@@ -35,8 +35,8 @@ if (mouse_check_button_pressed(mb_left)) {
             }
         }
 
-        if (instance_exists(sofiE)) {
-            with (sofiE) {
+        if (instance_exists(elf)) {
+            with (elf) {
                 if (variable_instance_exists(id, "original_x")) {
                     target_x = original_x;
                     clicked = false;

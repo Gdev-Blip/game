@@ -22,7 +22,7 @@
   "option_operagx_scale":0,
   "option_operagx_team_id":"",
   "option_operagx_team_name":"",
-  "option_operagx_texture_page":"16384x16384",
+  "option_operagx_texture_page":"1024x1024",
   "option_operagx_transparent_background":false,
   "option_operagx_version":"1.0.0.0",
   "resourceType":"GMOperaGXOptions",

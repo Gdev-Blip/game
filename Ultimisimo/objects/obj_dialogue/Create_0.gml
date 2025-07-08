@@ -24,7 +24,7 @@ saved_puede_dashear = false;
 saved_puede_tp      = false;
 
 // 3) Referencias y sprites
-player_ref      = instance_find(obj_player, 0);
+player_ref      = instance_find(oplayer, 0);
 portrait_sprite = spr_imagegerr;
 portrait_w      = sprite_get_width(portrait_sprite);
 portrait_h      = sprite_get_height(portrait_sprite);

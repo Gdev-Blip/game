@@ -1,4 +1,4 @@
-/// SCRIPT o FUNCIÓN dentro de obj_player: searchFree(x0, y0)
+/// SCRIPT o FUNCIÓN dentro de oplayer: searchFree(x0, y0)
 // Retorna [xLibre, yLibre] buscando en un radio alrededor de (x0, y0)
 
 function searchFree(x0, y0) {

@@ -1,4 +1,4 @@
-duration = 60;
+duration = 45;
 targetRoom = room;
 color = c_black
 

@@ -3,8 +3,8 @@
 // 1) Si NO hay diálogo activo: restaurar jugador si acaba de terminar
 if (!is_active) {
     if (dialogue_locked) {
-        if (instance_exists(obj_player)) {
-            with (obj_player) {
+        if (instance_exists(oplayer)) {
+            with (oplayer) {
                 limite        = saved_limite;
                 salto_fuerza  = saved_salto_fuerza;
                 aceleracion   = saved_aceleracion;
@@ -18,7 +18,7 @@ if (!is_active) {
 else {
     // 2) Diálogo activo: guardar estado y bloquear habilidades la primera vez
     if (!dialogue_locked) {
-        if (instance_exists(obj_player)) {
+        if (instance_exists(oplayer)) {
             saved_limite        = player_ref.limite;
             saved_salto_fuerza  = player_ref.salto_fuerza;
             saved_aceleracion   = player_ref.aceleracion;
@@ -29,8 +29,8 @@ else {
     }
 
     // 3) Mientras is_active, deshabilitar siempre dash/teleporte
-    if (instance_exists(obj_player)) {
-        with (obj_player) {
+    if (instance_exists(oplayer)) {
+        with (oplayer) {
             limite        = 1;
             salto_fuerza  = -11;
             aceleracion   = 0.17;
@@ -94,8 +94,8 @@ else {
 
 // 7) Detectar colisión con el objeto que cambia room (obj_gotonext).  
 //    Esto ocurre en la habitación previa a la transición, justo antes de cambiar.
-if (!start_second && instance_exists(obj_gotonext) && instance_exists(obj_player)) {
-    if (place_meeting(obj_player.x, obj_player.y, obj_gotonext)) {
+if (!start_second && instance_exists(obj_gotonext) && instance_exists(oplayer)) {
+    if (place_meeting(oplayer.x, oplayer.y, obj_gotonext)) {
         start_second = true;
     }
 }

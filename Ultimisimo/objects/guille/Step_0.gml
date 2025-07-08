@@ -22,7 +22,7 @@ if (mouse_check_button_pressed(mb_left) && hovered && !clicked) {
     clicked = true;
     target_x = 100;
     scale_x = -1;
-
+ layer_set_visible("selectG", true);
     with (all) {
         if (id != other.id && object_index != obj_volver) {
             visible = false;
@@ -34,7 +34,10 @@ if (mouse_check_button_pressed(mb_left) && hovered && !clicked) {
     volver.target_x = volver.x;
     volver.texto = "VOLVER";
     volver.spr_instanciado = false;
+}else if (!clicked) {
+    layer_set_visible("selectG", false);
 }
+
 
 // Movimiento suave
 x = lerp(x, target_x, 0.1);

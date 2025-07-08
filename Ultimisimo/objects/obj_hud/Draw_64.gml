@@ -2,8 +2,8 @@
 /// obj_hud — Draw GUI Event
 ///////////////////////////////
 
-/// 1) Tomar combo desde obj_player
-var player_inst   = instance_find(obj_player, 0);
+/// 1) Tomar combo desde oplayer
+var player_inst   = instance_find(oplayer, 0);
 var current_combo = 0;
 if (player_inst != noone) {
     current_combo = player_inst.combo;

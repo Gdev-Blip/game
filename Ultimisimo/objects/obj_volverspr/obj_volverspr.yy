@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"COMEBACK",
-    "path":"sprites/COMEBACK/COMEBACK.yy",
+    "name":"spr_ui_icon3",
+    "path":"sprites/spr_ui_icon3/spr_ui_icon3.yy",
   },
   "spriteMaskId":null,
   "visible":true,

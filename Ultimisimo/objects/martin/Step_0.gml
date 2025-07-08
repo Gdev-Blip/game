@@ -22,6 +22,7 @@ if (mouse_check_button_pressed(mb_left) && hovered && !clicked) {
     clicked = true;
     target_x = 100;
     scale_x = -1;
+ layer_set_visible("selectM", true);
 
     with (all) {
         if (id != other.id && object_index != obj_volver) {
@@ -34,6 +35,8 @@ if (mouse_check_button_pressed(mb_left) && hovered && !clicked) {
     volver.target_x = volver.x;
     volver.texto = "VOLVER";
     volver.spr_instanciado = false;
+} else if (!clicked) {
+    layer_set_visible("selectM", false);
 }
 
 // Movimiento suave
@@ -42,3 +45,4 @@ x = lerp(x, target_x, 0.1);
 // Hover visual
 var target_scale = hovered && !clicked ? 1.2 : 1;
 scale = lerp(scale, target_scale, 0.1);
+global.hover_id = noone;

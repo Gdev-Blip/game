@@ -1,6 +1,6 @@
-if (!ya_cambie && place_meeting(x, y, obj_player) && !instance_exists(ofade)) {
+if (!ya_cambie && place_meeting(x, y, oplayer) && !instance_exists(ofade)) {
     ya_cambie = true;
-    with (obj_player) {
+    with (oplayer) {
         vx = 0;
         vspeed = 0;
     }
